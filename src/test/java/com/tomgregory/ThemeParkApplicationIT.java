@@ -32,7 +32,7 @@ public class ThemeParkApplicationIT {
     public void getsSingleRide() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/ride/1")
                 .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isNotFound())
+                .andExpect(status().isOk())
                 .andReturn();
     }
 
